@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AppJogoDaVelha.MainPage">
+
+    <!-- ESTILO DOS BOTÕES -->
+    <ContentPage.Resources>
+        <Style x:Key="BotaoJogo" TargetType="Button">
+            <Setter Property="FontSize" Value="50"/>
+            <Setter Property="BackgroundColor" Value="Transparent"/>
+            <Setter Property="BorderWidth" Value="0"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+
+        <Grid HeightRequest="300"
+              WidthRequest="300">
+
+            <!-- BOTÕES (CLIQUE) -->
+            <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*,*">
+
+                <Button x:Name="btn00" Grid.Row="0" Grid.Column="0" Clicked="Button_Clicked" Style="{StaticResource BotaoJogo}" />
+                <Button x:Name="btn01" Grid.Row="0" Grid.Column="1" Clicked="Button_Clicked" Style="{StaticResource BotaoJogo}" />
+                <Button x:Name="btn02" Grid.Row="0" Grid.Column="2" Clicked="Button_Clicked" Style="{StaticResource BotaoJogo}" />
+
+                <Button x:Name="btn10" Grid.Row="1" Grid.Column="0" Clicked="Button_Clicked" Style="{StaticResource BotaoJogo}" />
+                <Button x:Name="btn11" Grid.Row="1" Grid.Column="1" Clicked="Button_Clicked" Style="{StaticResource BotaoJogo}" />
+                <Button x:Name="btn12" Grid.Row="1" Grid.Column="2" Clicked="Button_Clicked" Style="{StaticResource BotaoJogo}" />
+
+                <Button x:Name="btn20" Grid.Row="2" Grid.Column="0" Clicked="Button_Clicked" Style="{StaticResource BotaoJogo}" />
+                <Button x:Name="btn21" Grid.Row="2" Grid.Column="1" Clicked="Button_Clicked" Style="{StaticResource BotaoJogo}" />
+                <Button x:Name="btn22" Grid.Row="2" Grid.Column="2" Clicked="Button_Clicked" Style="{StaticResource BotaoJogo}" />
+
+            </Grid>
+
+            <!-- LINHAS VERTICAIS -->
+            <BoxView WidthRequest="4"
+                     BackgroundColor="Black"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Fill"
+                     TranslationX="-50"/>
+
+            <BoxView WidthRequest="4"
+                     BackgroundColor="Black"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Fill"
+                     TranslationX="50"/>
+
+            <!-- LINHAS HORIZONTAIS -->
+            <BoxView HeightRequest="4"
+                     BackgroundColor="Black"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Fill"
+                     TranslationY="-50"/>
+
+            <BoxView HeightRequest="4"
+                     BackgroundColor="Black"
+                     VerticalOptions="Center"
+                     HorizontalOptions="Fill"
+                     TranslationY="50"/>
+
+        </Grid>
+
+    </VerticalStackLayout>
+
+</ContentPage>
